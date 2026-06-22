@@ -16,7 +16,7 @@
  * IMPORTANTE: se editar este código depois, é preciso criar uma
  * NOVA implantação (ou gerenciar a existente e atualizar a versão),
  * senão a URL continua servindo a versão antiga.
- */
+ 
 
 const SHEET_NAME = 'Leads';
 
@@ -59,3 +59,4 @@ function doPost(e) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
+*/
