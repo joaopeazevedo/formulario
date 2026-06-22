@@ -658,6 +658,15 @@ function finishForm(){
 /* ---------- pós-agendamento ---------- */
 $('#scheduledBtn').addEventListener('click', ()=>{
   pixel('track','Schedule');
+
+  // empurra evento pro GTM — não depende do listener de clique
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'agendamento_realizado',
+    faturamento: answers.faturamento,
+    qualificado: answers.faturamento !== 'Abaixo de R$15.000' ? 'Sim' : 'Não'
+  });
+
   goTo('s-end-final');
 });
 </script>
