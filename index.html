@@ -658,9 +658,6 @@ function finishForm(){
 /* ---------- pós-agendamento ---------- */
 $('#scheduledBtn').addEventListener('click', ()=>{
   pixel('track','Schedule');
-  pixel('trackCustom','agendamento', {            // ← linha nova
-    faturamento: answers.faturamento,
-    qualificado: answers.faturamento !== 'Abaixo de R$15.000' ? 'Sim' : 'Não'
   });
 
   // empurra evento pro GTM — não depende do listener de clique
