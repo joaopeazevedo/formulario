@@ -40,17 +40,17 @@ src="https://www.facebook.com/tr?id=1027452569629341&ev=PageView&noscript=1"
 
 <style>
 :root{
-  --bg:#0D0B09;
-  --surface:#16120E;
-  --surface-2:#1E1812;
-  --line:#2C241B;
+  --bg:#FFFFFF;
+  --surface:#F6F2EC;
+  --surface-2:#EDE5D9;
+  --line:#E2D8C9;
   --copper:#C97B3D;
   --amber:#E09B5A;
-  --text:#F2EDE6;
-  --muted:#9A8F82;
-  --faint:#6B6157;
-  --ok:#7FB069;
-  --err:#D9695F;
+  --text:#1B1510;
+  --muted:#6E6152;
+  --faint:#9C8F7C;
+  --ok:#5E9046;
+  --err:#C4453B;
   --display:'Bricolage Grotesque',sans-serif;
   --body:'Inter',sans-serif;
   --mono:'IBM Plex Mono',monospace;
@@ -68,8 +68,8 @@ body::before{
   content:'';
   position:fixed;inset:0;
   background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201,123,61,.08), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 85% 110%, rgba(201,123,61,.05), transparent 60%);
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201,123,61,.10), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 85% 110%, rgba(201,123,61,.06), transparent 60%);
   pointer-events:none;
 }
 
@@ -88,7 +88,7 @@ body::before{
   font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;
   color:var(--faint);
 }
-.progress__label span{color:var(--amber)}
+.progress__label span{color:var(--copper)}
 
 /* ---------- screens ---------- */
 .screen{
@@ -201,7 +201,7 @@ body::before{
   transition:border-color .25s ease;
   border-radius:0;
 }
-.q input::placeholder{color:var(--faint);opacity:.6}
+.q input::placeholder{color:var(--faint);opacity:.7}
 .q input:focus{outline:none;border-bottom-color:var(--copper)}
 .input-prefix{
   display:flex;align-items:baseline;gap:4px;
@@ -246,13 +246,13 @@ body::before{
   border:1px solid var(--line);border-radius:5px;
   transition:all .18s ease;
 }
-.opt:hover .key{color:var(--amber);border-color:var(--copper)}
+.opt:hover .key{color:var(--copper);border-color:var(--copper)}
 .opt.selected{
   border-color:var(--amber);
   background:linear-gradient(0deg,rgba(201,123,61,.12),rgba(201,123,61,.12)),var(--surface);
 }
 .opt.selected .key{
-  background:var(--copper);color:#1A120A;border-color:var(--copper);
+  background:var(--copper);color:#fff;border-color:var(--copper);
 }
 
 /* ---------- back nav ---------- */
@@ -658,7 +658,6 @@ function finishForm(){
 /* ---------- pós-agendamento ---------- */
 $('#scheduledBtn').addEventListener('click', ()=>{
   pixel('track','Schedule');
-  });
 
   // empurra evento pro GTM — não depende do listener de clique
   window.dataLayer = window.dataLayer || [];
